@@ -1,10 +1,11 @@
 require 'selenium-webdriver'
+Selenium::WebDriver::Chrome.driver_path='/usr/local/bin/chromedriver'
 
 #chrome instatiation
 driver = Selenium::WebDriver.for :chrome
 
 #loading the assertselenium URL
-driver.navivgate.to "http://www.assertselenium.com"
+driver.navigate.to "http://www.assertselenium.com"
 
 #click on the follow link repsent on the assert selenium homepage
 FollowButton = driver.find_element(:link, "Follow")
